@@ -1,4 +1,4 @@
-# backend-challeneges
+# backend-challenges
 ## Challenges
 ### 1. Data Architecture
 There are many financial instruments and the way they are structured is complex. In this challenge, we'd like you to develop a mock database structure for financial instruments that fulfills the following sets of requirements:
