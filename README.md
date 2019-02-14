@@ -12,7 +12,7 @@ There are many financial instruments and the way they are structured is complex.
 Your challenge is to develop a database structure that appropriately maps these relationships and requirements. Utilizing your preferred tools (e.g., MySQL, PostgreSQL, Mongo, etc.) build out this structure and provide the database code required to set it up.
 
 ### Carbon Analytic Calculation
-Utilizing the language and tools of choice implement a function that can be utilized to calculate the (strawman) Adjusted CO2 Total emissions for a company. The calculation is laid out below. The data is stored inside of the data.json file. Your code structure can take whatever you believe to be best (individual function, class, module, etc.)
+Utilizing the language and tools of choice implement a function that can be utilized to calculate the (strawman) Adjusted CO2 Total emissions for a company. The calculation is laid out below. The data is stored inside of the [included data file](/carbon_calculation/data.json?raw=true). Your code structure can take whatever you believe to be best (individual function, class, module, etc.)
 Please implement the code as well as write tests for the calculation, showcasing how you would write tests for such requirements. Provide instructions with your submission for how to call your implemented function as well as how to run the tests.
 
 ![Calculation](/carbon_calculation/calculation.png?raw=true "Calculation")
