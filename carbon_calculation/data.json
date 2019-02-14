@@ -1,0 +1,182 @@
+[
+  {
+    "ISIN": "US0000000000",
+    "Total Energy Use": 7000000,
+    "Total CO2 Equivalents Emissions": 94972.49198,
+    "Renewable Energy Purchased": 10576.00479,
+    "Renewable Energy Produced": 96652.16115,
+    "Carbon Credit Value": 8171.323352,
+    "CO2 Analytic": 81902.98846
+  },
+  {
+    "ISIN": "US0000000001",
+    "Total Energy Use": 80000000,
+    "Total CO2 Equivalents Emissions": 306900.6192,
+    "Renewable Energy Purchased": 31961.79405,
+    "Renewable Energy Produced": 38372.1921,
+    "Carbon Credit Value": 57387.1,
+    "CO2 Analytic": 247545.0665
+  },
+  {
+    "ISIN": "US0000000002",
+    "Total Energy Use": 153000000,
+    "Total CO2 Equivalents Emissions": 171320.1651,
+    "Renewable Energy Purchased": 62884.91047,
+    "Renewable Energy Produced": 10689.83474,
+    "Carbon Credit Value": 84303.7259,
+    "CO2 Analytic": 86464.06508
+  },
+  {
+    "ISIN": "US0000000003",
+    "Total Energy Use": 226000000,
+    "Total CO2 Equivalents Emissions": 2250.272892,
+    "Renewable Energy Purchased": 12949.74785,
+    "Renewable Energy Produced": 27468.66907,
+    "Carbon Credit Value": 45713.96386,
+    "CO2 Analytic": -44835.87919
+  },
+  {
+    "ISIN": "US0000000004",
+    "Total Energy Use": 299000000,
+    "Total CO2 Equivalents Emissions": 132696.7376,
+    "Renewable Energy Purchased": 42559.65263,
+    "Renewable Energy Produced": 69567.95366,
+    "Carbon Credit Value": 17515.5,
+    "CO2 Analytic": 111694.6424
+  },
+  {
+    "ISIN": "US0000000005",
+    "Total Energy Use": 372000000,
+    "Total CO2 Equivalents Emissions": 204269.3867,
+    "Renewable Energy Purchased": 9991.766644,
+    "Renewable Energy Produced": 55829.34503,
+    "Carbon Credit Value": 26647.856,
+    "CO2 Analytic": 174827.678
+  },
+  {
+    "ISIN": "US0000000006",
+    "Total Energy Use": 445000000,
+    "Total CO2 Equivalents Emissions": 64963.62994,
+    "Renewable Energy Purchased": 9515.906056,
+    "Renewable Energy Produced": 24720.73308,
+    "Carbon Credit Value": 10556.11359,
+    "CO2 Analytic": 53170.89797
+  },
+  {
+    "ISIN": "US0000000007",
+    "Total Energy Use": 518000000,
+    "Total CO2 Equivalents Emissions": 89288.41927,
+    "Renewable Energy Purchased": 32904.92748,
+    "Renewable Energy Produced": 4051.865565,
+    "Carbon Credit Value": 8902.593156,
+    "CO2 Analytic": 80180.67966
+  },
+  {
+    "ISIN": "US0000000008",
+    "Total Energy Use": 591000000,
+    "Total CO2 Equivalents Emissions": 59887.44837,
+    "Renewable Energy Purchased": 4408.314004,
+    "Renewable Energy Produced": 31232.14481,
+    "Carbon Credit Value": 8838.602818,
+    "CO2 Analytic": 49487.04792
+  },
+  {
+    "ISIN": "US0000000009",
+    "Total Energy Use": 664000000,
+    "Total CO2 Equivalents Emissions": 270793.8773,
+    "Renewable Energy Purchased": 6147.617183,
+    "Renewable Energy Produced": 9418.298827,
+    "Carbon Credit Value": 2135.478871,
+    "CO2 Analytic": 268186.2398
+  },
+  {
+    "ISIN": "US0000000010",
+    "Total Energy Use": 737000000,
+    "Total CO2 Equivalents Emissions": 436123.8946,
+    "Renewable Energy Purchased": 61287.84832,
+    "Renewable Energy Produced": 9800.114222,
+    "Carbon Credit Value": 45901.30643,
+    "CO2 Analytic": 389716.3573
+  },
+  {
+    "ISIN": "US0000000011",
+    "Total Energy Use": 810000000,
+    "Total CO2 Equivalents Emissions": 219384.6241,
+    "Renewable Energy Purchased": 18766.81362,
+    "Renewable Energy Produced": 13746.23147,
+    "Carbon Credit Value": 47047.32813,
+    "CO2 Analytic": 171647.988
+  },
+  {
+    "ISIN": "US0000000012",
+    "Total Energy Use": 883000000,
+    "Total CO2 Equivalents Emissions": 907965.0176,
+    "Renewable Energy Purchased": 11742.15742,
+    "Renewable Energy Produced": 15078.18917,
+    "Carbon Credit Value": 3432.989027,
+    "CO2 Analytic": 903772.1048
+  },
+  {
+    "ISIN": "US0000000013",
+    "Total Energy Use": 956000000,
+    "Total CO2 Equivalents Emissions": 63194.4312,
+    "Renewable Energy Purchased": 76353.30911,
+    "Renewable Energy Produced": 49.54423131,
+    "Carbon Credit Value": 6784.725662,
+    "CO2 Analytic": 56404.97568
+  },
+  {
+    "ISIN": "US0000000014",
+    "Total Energy Use": 1029000000,
+    "Total CO2 Equivalents Emissions": 58244.40199,
+    "Renewable Energy Purchased": 898.2632691,
+    "Renewable Energy Produced": 903570.7574,
+    "Carbon Credit Value": 2965.056586,
+    "CO2 Analytic": 10100.7834
+  },
+  {
+    "ISIN": "US0000000015",
+    "Total Energy Use": 1102000000,
+    "Total CO2 Equivalents Emissions": 9657.810784,
+    "Renewable Energy Purchased": 9985.097548,
+    "Renewable Energy Produced": 14877.02366,
+    "Carbon Credit Value": 83257.80621,
+    "CO2 Analytic": -74343.51317
+  },
+  {
+    "ISIN": "US0000000016",
+    "Total Energy Use": 1175000000,
+    "Total CO2 Equivalents Emissions": 8939.83813,
+    "Renewable Energy Purchased": 10044.20882,
+    "Renewable Energy Produced": 3664.637195,
+    "Carbon Credit Value": 7357.74964,
+    "CO2 Analytic": 1398.849868
+  },
+  {
+    "ISIN": "US0000000017",
+    "Total Energy Use": 1248000000,
+    "Total CO2 Equivalents Emissions": 294541.4886,
+    "Renewable Energy Purchased": 29398.99459,
+    "Renewable Energy Produced": 28384.09547,
+    "Carbon Credit Value": 31341.08653,
+    "CO2 Analytic": 261778.0972
+  },
+  {
+    "ISIN": "US0000000018",
+    "Total Energy Use": 1321000000,
+    "Total CO2 Equivalents Emissions": 617044.557,
+    "Renewable Energy Purchased": 15389.82384,
+    "Renewable Energy Produced": 6266.641717,
+    "Carbon Credit Value": 8289.310471,
+    "CO2 Analytic": 608438.3684
+  },
+  {
+    "ISIN": "US0000000019",
+    "Total Energy Use": 1394000000,
+    "Total CO2 Equivalents Emissions": 683013.3757,
+    "Renewable Energy Purchased": 25050.59721,
+    "Renewable Energy Produced": 3177.824916,
+    "Carbon Credit Value": 9323.29235,
+    "CO2 Analytic": 673525.1389
+  }
+]
