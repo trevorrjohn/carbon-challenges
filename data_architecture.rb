@@ -12,23 +12,21 @@ gemfile(true) do
 
   gem "activerecord"
   gem "pg"
-  # gem "pry"
 end
 
 require "active_record"
-# require "pry"
 
 db_name = ENV.fetch("DB_NAME", "carbon_challenge")
 db_user = ENV.fetch("DB_USER", "postgres")
 db_config = {
-  host: :localhost, adapter: :postgresql, database: db_name, username: db_user
+  "host" => :localhost, "adapter" => :postgresql, "database" => db_name, "username" => db_user
 }
 ActiveRecord::Base.establish_connection(db_config)
 begin
   ActiveRecord::Base.connection
-rescue ActiveRecord::NoDatabaseError => e
-  $stderr.puts "\n\tOops! Must create database before running script\n\n"
-  exit 1
+rescue ActiveRecord::NoDatabaseError
+  ActiveRecord::Tasks::DatabaseTasks.create(db_config)
+  ActiveRecord::Base.establish_connection(db_config)
 end
 
 ActiveRecord::Schema.define do
