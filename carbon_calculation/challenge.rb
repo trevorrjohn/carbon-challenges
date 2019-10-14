@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   require "bundler/inline"
 rescue LoadError => e
@@ -10,11 +12,11 @@ gemfile(true) do
 
   gem "activerecord"
   gem "pg"
-  gem "pry"
+  # gem "pry"
 end
 
 require "active_record"
-require "pry"
+# require "pry"
 
 db_name = ENV.fetch("DB_NAME", "carbon_challenge")
 db_config = {
@@ -188,13 +190,13 @@ Holding.create!(holder: apple, instrument: apple_hq, weight: 0.8)
 Holding.create!(holder: google, instrument: google_hq, weight: 0.7)
 Holding.create!(holder: portfolio, instrument: google_hq, weight: 0.1)
 Holding.create!(holder: portfolio, instrument: etf, weight: 0.1)
-apple_score = EsgScore.create!(
+EsgScore.create!(
   holder: apple, environmental: 0.002, social: 0.4, governance: 0.8
 )
-google_score = EsgScore.create!(
+EsgScore.create!(
   holder: google, environmental: 0.008, social: 0.002, governance: 1
 )
-portfolio_score = EsgScore.create!(
+EsgScore.create!(
   holder: portfolio, environmental: 0.8, social: 0.3, governance: 0.6
 )
 def display(company)
