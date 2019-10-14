@@ -20,9 +20,15 @@ require "active_record"
 
 db_name = ENV.fetch("DB_NAME", "carbon_challenge")
 db_config = {
-  host: :localhost, adapter: :postgresql, encoding: "utf-8", database: db_name
+  host: :localhost, adapter: :postgresql, database: db_name
 }
 ActiveRecord::Base.establish_connection(db_config)
+begin
+  ActiveRecord::Base.connection
+rescue ActiveRecord::NoDatabaseError => e
+  $stderr.puts "\n\tOops! Must create database before running script\n\n"
+  exit 1
+end
 
 ActiveRecord::Schema.define do
   execute <<~ENUMS
@@ -212,3 +218,4 @@ end
 puts display(apple)
 puts display(google)
 puts display(portfolio)
+
