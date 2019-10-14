@@ -57,7 +57,8 @@ elsif calc2.calculate != -50
   exit 1
 end
 
-JSON.parse(File.read("./carbon_calculation/data.json")).each do |data|
+filename = ARGV.size == 1 ? ARGV[0] : "./carbon_calculation/data.json"
+JSON.parse(File.read(filename)).each do |data|
   calc = CarbonAnalyticCalculator.new(
     total_energy_use: data["Total Energy Use"],
     total_co2_equivalents_emissions: data["Total CO2 Equivalents Emissions"],
