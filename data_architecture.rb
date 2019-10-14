@@ -31,7 +31,7 @@ end
 
 ActiveRecord::Schema.define do
   execute <<~ENUMS
-    DROP TYPE IF EXISTS asset_class, rating, instrument_type CASCADE;
+    DROP TYPE IF EXISTS asset_class, instrument_type CASCADE;
 
     CREATE TYPE asset_class AS ENUM (
       'equity', 'fixed_income', 'cash_equivalent', 'commodity', 'real_estate'
@@ -204,6 +204,7 @@ EsgScore.create!(
 EsgScore.create!(
   holder: portfolio, environmental: 0.8, social: 0.3, governance: 0.6
 )
+
 def display(company)
   holdings = company.holdings.joins(:instrument) \
     .pluck("instruments.name, holdings.weight") \
@@ -214,6 +215,7 @@ def display(company)
       Holdings: #{holdings}"
   DISPLAY
 end
+
 puts display(apple)
 puts display(google)
 puts display(portfolio)
