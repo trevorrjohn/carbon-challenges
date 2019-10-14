@@ -19,8 +19,9 @@ require "active_record"
 # require "pry"
 
 db_name = ENV.fetch("DB_NAME", "carbon_challenge")
+db_user = ENV.fetch("DB_USER", "postgres")
 db_config = {
-  host: :localhost, adapter: :postgresql, database: db_name
+  host: :localhost, adapter: :postgresql, database: db_name, username: db_user
 }
 ActiveRecord::Base.establish_connection(db_config)
 begin
