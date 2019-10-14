@@ -95,6 +95,8 @@ class EsgScore < ActiveRecord::Base
     greater_than_or_equal_to: 0, less_than_or_equal_to: 1
   }
 
+  scope :latest, -> { order(created_at: :desc) }
+
   def score(round: 8)
     ((social + environmental + governance) / 3.to_d).round(round)
   end
@@ -113,6 +115,7 @@ class Instrument < ActiveRecord::Base
   has_many :holdings, as: :holder
   has_many :instruments, through: :holdings
   has_many :esg_scores, as: :holder
+  has_one :latest_esg_score, -> { latest }, as: :holder, class_name: 'EsgScore'
 
   enum instrument_type: {
     cash: :cash,
@@ -143,13 +146,16 @@ end
 class Company < ActiveRecord::Base
   has_many :holdings, as: :holder
   has_many :esg_scores, as: :holder
+  has_one :latest_esg_score, -> { latest }, as: :holder, class_name: 'EsgScore'
 
   validates :name, presence: true
 end
 
 class Portfolio < ActiveRecord::Base
   belongs_to :client
+  has_many :holdings, as: :holder
   has_many :esg_scores, as: :holder
+  has_one :latest_esg_score, -> { latest }, as: :holder, class_name: 'EsgScore'
 
   validates :name, presence: true
 end
@@ -173,9 +179,15 @@ google_hq = Instrument.create!(
   isin: "googlehq1", name: "Google Headquarters",
   instrument_type: :mortgage, asset_class: :real_estate
 )
-Holding.create!(holder: apple, instrument: apple_hq, weight: 1)
-Holding.create!(holder: google, instrument: google_hq, weight: 0.999)
-Holding.create!(holder: portfolio, instrument: google_hq, weight: 0.001)
+etf = Instrument.create!(
+  isin: "ETF", name: "My ETF", instrument_type: :etf, asset_class: :real_estate
+)
+Holding.create!(holder: etf, instrument: apple_hq, weight: 0.2)
+Holding.create!(holder: etf, instrument: google_hq, weight: 0.2)
+Holding.create!(holder: apple, instrument: apple_hq, weight: 0.8)
+Holding.create!(holder: google, instrument: google_hq, weight: 0.7)
+Holding.create!(holder: portfolio, instrument: google_hq, weight: 0.1)
+Holding.create!(holder: portfolio, instrument: etf, weight: 0.1)
 apple_score = EsgScore.create!(
   holder: apple, environmental: 0.002, social: 0.4, governance: 0.8
 )
@@ -185,6 +197,16 @@ google_score = EsgScore.create!(
 portfolio_score = EsgScore.create!(
   holder: portfolio, environmental: 0.8, social: 0.3, governance: 0.6
 )
-puts "Apple: #{apple_score.score}"
-puts "Google: #{google_score.score}"
-puts "Portfolio: #{portfolio_score.score}"
+def display(company)
+  holdings = company.holdings.joins(:instrument) \
+    .pluck("instruments.name, holdings.weight") \
+    .flat_map{ |x| x.join(' - ') }
+  <<~DISPLAY
+    #{company.name}:
+      ESG Score: #{company.latest_esg_score&.score || "NA"}
+      Holdings: #{holdings}"
+  DISPLAY
+end
+puts display(apple)
+puts display(google)
+puts display(portfolio)
